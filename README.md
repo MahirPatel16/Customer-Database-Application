@@ -31,21 +31,30 @@
 ## Getting Started
 ---------------
 
-### Clone the Repository
+#### Clone the Repository
 ```
 git clone https://github.com/MahirPatel16/Customer-Database-Application.git
 ```
 
-### Install Required Libraries
+#### Install Required Libraries
 ```
 pip install tkinter sqlite3
 ```
 
-### Run the Application
-```python 
-main.py
+#### Run the Application
 ```
+python3 main.py
+```
+## Build the Application
 
+#### Install pyinstaller
+```
+pip install pyinstaller
+```
+#### Build
+```
+pyinstaller main.py --onefile
+```
 
 ## Usage
 -----
