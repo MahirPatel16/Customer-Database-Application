@@ -1,5 +1,5 @@
-# Customer Management and Order Tracking System
-
+# Customer Management and Order Managing System
+The Customer Management and Order Managing System is an application designed to streamline customer relationship management and order history processes. It offers comprehensive functionalities for managing customer data, orders, and ensuring data integrity through an SQLite database backend. The system features a user-friendly interface built with Tkinter, providing ease of use and responsiveness across different platforms.
 ## Features
 ------------
 
@@ -9,10 +9,10 @@
 * Update existing customer information to keep records up-to-date.
 * Remove inactive or duplicate customer records to maintain a clean database.
 
-### Order Tracking
+### Order Management
 * Manage orders for each customer, including order history and real-time balance updates.
 * View a comprehensive list of past orders for each customer.
-* Track pending orders and update their status as needed.
+* Track pending dues of orders and update their status as needed.
 * Calculate and display the real-time balance for customers based on their order history.
 ### Search Functionality
 * Quickly search for customers by name or ID.
@@ -45,17 +45,18 @@ pip install tkinter sqlite3
 ```
 python3 main.py
 ```
-## Build the Application
-
+## Additional Notes
+Build the application executable using *pyinstaller* for distribution :
 #### Install pyinstaller
 ```
 pip install pyinstaller
 ```
-#### Build
+#### Build the application
 ```
 pyinstaller main.py --onefile
 ```
 
+This command will generate an 'main.exe' file in the dist folder.
 ## Usage
 -----
 
