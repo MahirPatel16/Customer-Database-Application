@@ -292,8 +292,12 @@ class CustomerDatabase:
         self.top_frame.pack(fill="x")
 
         self.quit_button = tk.Button(self.top_frame, text="Quit", command=self.root.destroy, bg="#dc3545", fg="white")
-        self.quit_button.pack(side="top", padx=10,pady=(3,0))
+        self.quit_button.pack(side="right", padx=10,pady=(3,0))
+        self.quit_button.config(font=("Arial", 10, "bold"))
         
+        self.minimise_button = tk.Button(self.top_frame, text="Minimise", command=self.minimize_window, bg="#dc3545", fg="white")
+        self.minimise_button.pack(side="right", padx=10,pady=10)
+        self.minimise_button.config(font=("Arial", 10, "bold"))
 
         self.tree_frame = tk.Frame(self.main_frame, bg="#f0f0f0")
         self.tree_frame.pack(side="left", fill="both", expand=True, padx=10)
@@ -356,9 +360,6 @@ class CustomerDatabase:
         self.sort_button.pack(fill="x", pady=10)
         self.sort_button.config(font=("Arial", 12, "bold"))
         
-        self.minimise_button = tk.Button(self.form_frame, text="Minimise", command=self.minimize_window, bg="#dc3545", fg="white")
-        self.minimise_button.pack( padx=10,pady=10)
-        self.minimise_button.config(font=("Arial", 12, "bold"))
 
     def load_data_from_database(self):
         self.cursor.execute("SELECT * FROM customers")
@@ -531,6 +532,7 @@ class CustomerDatabase:
         self.conn.commit()
         print("Deleted customer")
         dialog.destroy()
+        self.reset_treeview()
     def search_customer(self):
         self.tree.delete(*self.tree.get_children())
         
