@@ -65,11 +65,11 @@ pyinstaller main.py --onefile
 3. Save the new customer record to the database.
 
 ### Manage Orders
-1. Manage orders for each customer by clicking the "Order History" button.
+1. Manage orders for each customer by double clicking the customer row in the table.
 2. Add new orders and view past orders for customers.
-3. Update order status and track pending orders.
+3. Update order details and track pending dues.
 ### Search for Customers
-1. Search for customers by name or ID using the search bar.
+1. Search for customers by name using the search bar.
 2. View customer details and order history based on search results.
 
 ### Update or Delete Customer Records
